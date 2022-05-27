@@ -29,7 +29,7 @@ class API {
         "currency": currency.map((e) => e.toJson()).toList()
       };
       var file = File(
-          "/Users/macbook/Documents/oop practice/simpleConsole/simplConsole-2/simpl/htmlJson/simpl/src/source.json");
+          "../src/source.json");
       await file.writeAsString(jsonEncode(mapData));
     } else {
       print('Request failed with status: ${response.statusCode}.');
@@ -40,7 +40,7 @@ class API {
   readFromFile() async {
     const JsonDecoder decoder = JsonDecoder();
     var file = File(
-        "/Users/macbook/Documents/oop practice/simpleConsole/simplConsole-2/simpl/htmlJson/simpl/src/source.json");
+        "../src/source.json");
     if (file.existsSync()) {
       if (file.lengthSync() == 0) {
         return 0;
@@ -50,7 +50,7 @@ class API {
         return object;
       }
     } else {
-      File("/Users/macbook/Documents/oop practice/simpleConsole/simplConsole-2/simpl/htmlJson/simpl/src/source.json")
+      File("../src/source.json")
           .createSync();
       return 0;
     }
