@@ -1,7 +1,8 @@
 import 'dart:io';
 import 'package:colorize/colorize.dart';
+
 class Utils {
-    void printModel(Colorize text) {
+  void printModel(Colorize text) {
     print(greenColor(
         '''-----------------------------------------------------------------------
 |                                                                     |'''));
@@ -22,5 +23,6 @@ class Utils {
   clear() {
     print(Process.runSync("clear", [], runInShell: true).stdout);
   }
-
 }
+
+
